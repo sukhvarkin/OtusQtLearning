@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QStack>
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,6 +17,12 @@ public:
     ~MainWindow();
 
 private:
+    void onButtonClicked();
+    void calculate();
+
+private:
     Ui::MainWindow *ui;
+
+    QStack<QString> m_stk;
 };
 #endif // MAINWINDOW_H
